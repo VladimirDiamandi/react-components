@@ -7,17 +7,18 @@ import { TableRowType } from "../../resources";
 interface Props {
   className: string;
   data: TableRowType;
+  loading: boolean;
 }
 
-export const TableRow: FC<Props> = ({ className, data }) => {
+export const TableRow: FC<Props> = ({ className, data, loading }) => {
   return (
-    <div className={clsx(styles.grayTable_row, className)}>
-      <div>{data.id}</div>
-      <div>{data.from}</div>
-      <div>{data.to}</div>
-      <div>{data.paid}</div>
-      <div>{data.received}</div>
-      <div className={styles.date}>{data.date}</div>
-    </div>
+    <tr className={clsx(styles.grayTable_row, styles.rowWrapper, className)}>
+      <td>{!loading ? data.id : <div />}</td>
+      <td>{!loading ? data.from : <div />}</td>
+      <td>{!loading ? data.to : <div />}</td>
+      <td>{!loading ? data.paid : <div />}</td>
+      <td>{!loading ? data.received : <div />}</td>
+      <td className={styles.date}>{!loading ? data.date: <div />}</td>
+    </tr>
   );
 };

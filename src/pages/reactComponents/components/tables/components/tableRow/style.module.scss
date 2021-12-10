@@ -1,7 +1,16 @@
 @import "styles/style";
 
-@media (max-width: 700px) {
-  .date {
-    display: none;
+.rowWrapper {
+  div {
+    width: 45px;
+    height: 8px;
+    border-radius: 10px;
+    background-color: $gray;
+  }
+
+  @media (max-width: 700px) {
+    .date {
+      display: none;
+    }
   }
 }
