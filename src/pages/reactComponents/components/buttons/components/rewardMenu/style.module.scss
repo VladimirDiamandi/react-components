@@ -1,0 +1,91 @@
+@import "src/styles/style";
+
+.rewardMenuWrapper {
+  background-color: $black;
+  z-index: 13001;
+  width: 100%;
+  max-width: 645px;
+  display: flex;
+  margin: 0 15px;
+  overflow: hidden;
+
+  .rewardInfoWrapper {
+    padding-top: 26px;
+    padding-right: 27px;
+    margin-left: 16px;
+    position: relative;
+
+    .lightCircle_one {
+      z-index: -1;
+      position: absolute;
+      width: 283px;
+      height: 283px;
+      left: 40px;
+      top: -122px;
+      background: radial-gradient(
+        28.2% 28.2% at 67.46% 50%,
+        #d2cff5 0%,
+        #f8f4f2 78.78%,
+        #fffdfb 100%
+      );
+      opacity: 0.66;
+      border-radius: 50%;
+    }
+
+    .lightCircle_two {
+      position: absolute;
+      width: 378px;
+      height: 378px;
+      left: 140px;
+      top: 150px;
+
+      background: radial-gradient(
+        28.08% 28.08% at 67.46% 50%,
+        #ffbfbf 0%,
+        rgba(250, 246, 242, 0.0001) 100%
+      );
+      opacity: 0.66;
+    }
+
+    .closeButtonWrapper {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 30px;
+
+      .closeButton {
+        svg {
+          fill: $white;
+        }
+      }
+    }
+
+    .rewardIcon {
+      margin-bottom: 12px;
+      fill: $light-purple2;
+    }
+
+    .title {
+      z-index: 2;
+      color: $white;
+      @include useFont(28px, 130%, 500);
+      margin-block-end: 16px;
+    }
+
+    .description {
+      z-index: 2;
+      color: $white;
+      @include useFont(14px, 150%);
+      margin-block-end: 24px;
+    }
+
+    .likeButton {
+      height: 38px;
+      border-radius: 41px;
+      padding: 0 43px;
+      text-transform: uppercase;
+      @include useFont(13px, 16px, bold);
+      letter-spacing: 0.8px;
+      margin-bottom: 15px;
+    }
+  }
+}

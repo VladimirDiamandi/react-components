@@ -1,0 +1,39 @@
+@import "styles/style";
+
+.tabs {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 30px;
+  overflow: hidden;
+  background-color: $dark-purple2;
+
+  .tabButton {
+    width: 100%;
+    display: block;
+    text-transform: uppercase;
+    @include useFont(14px, 17px, bold);
+    letter-spacing: 1px;
+    color: $light-purple3;
+    z-index: 1;
+    height: 30px;
+    padding: 0px;
+
+    &.activeTab {
+      color: $white;
+    }
+  }
+
+  .highlighter {
+    opacity: 1;
+    border-radius: 21px;
+    background-color: $dark-purple3;
+  }
+
+  @media (max-width: 700px) {
+    .tabButton {
+      @include useFont(10px, 12px, bold);
+    }
+  }
+}

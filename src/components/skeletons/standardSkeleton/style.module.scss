@@ -1,0 +1,31 @@
+@import 'styles/style';
+
+@mixin useSkeleton {
+  height: 7px;
+  width: 50px;
+  border-radius: 10px;
+}
+
+.skeletonWrapper {
+  position: relative;
+
+  .loader {
+    position: absolute;
+    top: calc(50% - 43px);
+    left: calc(50% - 43px);
+
+    .circular {
+      border-color: $white transparent transparent transparent;
+    }
+  }
+
+  .skeletonColumn {
+    background-color: $gray;
+    @include useSkeleton();
+  }
+
+  .skeletonHeader {
+    background-color: $gray;
+    @include useSkeleton();
+  }
+}

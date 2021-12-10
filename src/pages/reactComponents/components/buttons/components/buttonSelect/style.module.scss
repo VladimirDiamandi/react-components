@@ -1,0 +1,62 @@
+@import "styles/style";
+
+.coinImg {
+  width: 32px;
+  height: 32px;
+}
+
+.select {
+  width: 200px;
+  border-radius: 4px;
+  padding: 4px 8px;
+  background-color: white;
+  &Options {
+    min-width: auto;
+    max-height: 300px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: rgba(black, 0.2);
+    }
+  }
+  &Front {
+    display: flex;
+    align-items: center;
+    &Label {
+      @include useFont(16px, 16px, 700);
+      margin-left: 10px;
+    }
+  }
+}
+
+.arrow {
+  color: rgba(black, 0.3);
+  width: 30px;
+  height: 30px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: white;
+  transition: filter 0.15s;
+  &:hover {
+    filter: brightness(0.9);
+    cursor: pointer;
+  }
+  & > img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+  }
+  & > span {
+    @include useFont(16px, 16px, 700);
+  }
+  &Disabled {
+    pointer-events: none;
+    filter: brightness(0.9);
+  }
+}

@@ -1,0 +1,39 @@
+.select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    background-color: rgba(white, 0.5);
+}
+
+.arrow {
+    color: rgba(black, 0.3);
+    transition: transform 0.2s;
+    &Open {
+        transform: rotate(-180deg);
+    }
+}
+
+.optionContainer {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-color: white;
+    border-radius: 4px;
+    overflow: hidden;
+    min-width: fit-content;
+    animation-name: expandSelect;
+    animation-duration: 0.15s;
+    transform-origin: top;
+}
+
+@keyframes expandSelect {
+    from {
+        transform: scale(0.7, 0.3);
+    }
+    to {
+        transform: scale(1, 1);
+    }
+}

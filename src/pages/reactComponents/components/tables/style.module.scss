@@ -1,0 +1,54 @@
+@import "styles/style";
+
+$grid-row: .5fr 1fr 1fr 1fr 1fr 2fr;
+$grid-row-mobile: .5fr 1fr 1fr 1fr 1fr;
+
+.tablesWrapper {
+  background-color: $pink;
+  @include useWrapper();
+}
+
+.rowWrapper {
+  width: 100%;
+
+  .table_header {
+    padding: 0 17px;
+    display: grid;
+    grid-template-columns: $grid-row;
+    align-items: center;
+    @include useFont(10px, 10px, 700);
+  }
+
+  .table_row {
+    padding: 0 17px;
+    display: grid;
+    align-items: center;
+    grid-template-columns: $grid-row;
+    @include useFont(14px, 14px, 400);
+  }
+
+  @media (max-width: 700px) {
+
+    .date {
+      display: none;
+    }
+
+    .table_header {
+      padding: 0 10px;
+      grid-template-columns: $grid-row-mobile;
+      @include useFont(8px, 8px, 700);
+    }
+
+    .table_row {
+      padding: 0 10px;
+      grid-template-columns: $grid-row-mobile;
+    }
+  }
+}
+
+.checkWrapper {
+  displaY: flex;
+  align-items: center;
+  gap: 10px;
+  @include useFont(14px, 16px, bold);
+}
